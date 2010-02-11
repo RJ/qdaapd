@@ -47,9 +47,8 @@
 #include "qdaapd/taginput.h"
 #include "qdaapd/registry.h"
 
-using namespace std;
-
-typedef QMap<QString,QString> ssmap;
+namespace QDaap
+{
 
 class QDAAPd :  public QObject
 {
@@ -81,12 +80,14 @@ private:
 
 };
 
+} // ns
+
 static void mongoose_handler(struct mg_connection * conn,
                              const struct mg_request_info * request_info,
                              void *user_data)
 {
-    QDAAPd * httpd = (QDAAPd*)user_data;
-    httpd->handleRequest(conn, request_info);
+    QDaap::QDAAPd * d = (QDaap::QDAAPd*)user_data;
+    d->handleRequest(conn, request_info);
 }
 
 

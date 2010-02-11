@@ -3,6 +3,8 @@
 #include <QByteArray>
 #include <QTimer>
 
+using namespace QDaap;
+
 // pro-tip: advertise your service via bonjour using this command:
 // avahi-publish-service QDAAPname _daap._tcp 8080
 
