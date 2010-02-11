@@ -1,0 +1,9 @@
+example/example-qdaapd
+build/*
+*.swp
+*.a
+*.user
+Makefile*
+makefile*
+*.o
+moc_*
